@@ -46,7 +46,7 @@ function Person(name, age) {
 }
 
 Person.prototype.eat = function eat(someFood) {
-  if (this.stomach.length <= 9) {
+  if (this.stomach.length <= 9) {//question: why does the length need to be 9, shouldn't it be 10?
     this.stomach.push(someFood);
   }
 }
@@ -76,6 +76,16 @@ Person.prototype.toString = function toString() {
 function Car(model, milesPerGallon) {
   this.model = model;
   this.milesPerGallon = milesPerGallon;
+  this.tank = 0;
+  this.odometer = 0;
+}
+
+Car.prototype.fill = function fill(gallons) {
+  this.tank.push(gallons);
+}
+
+Car.prototype.drive = function drive(distance) {
+  //will come back to this after i've completed MVP
 }
 
 /*
